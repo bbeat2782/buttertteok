@@ -10,7 +10,7 @@ import { useBlogSearch } from './hooks/useBlogSearch'
 import type { Place } from './types/kakao'
 import './App.css'
 
-const DEFAULT_CENTER = { lat: 35.9, lng: 127.8 }
+const DEFAULT_CENTER = { lat: 36.3, lng: 127.5 }
 const DEFAULT_LEVEL = 14
 
 function getBounds(places: Place[]): { center: { lat: number; lng: number }; level: number } {
@@ -34,7 +34,7 @@ function getBounds(places: Place[]): { center: { lat: number; lng: number }; lev
   const maxDiff = Math.max(latDiff, lngDiff)
 
   let level = 8
-  if (maxDiff > 3) level = 13
+  if (maxDiff > 3) level = 14
   else if (maxDiff > 1.5) level = 11
   else if (maxDiff > 0.5) level = 9
   else if (maxDiff > 0.1) level = 7
