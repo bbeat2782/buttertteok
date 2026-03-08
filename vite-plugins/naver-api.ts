@@ -60,7 +60,7 @@ async function searchNaver(
 
   if (!response.ok) return []
 
-  const data = await response.json()
+  const data = (await response.json()) as { items?: NaverItem[] }
   return data.items || []
 }
 

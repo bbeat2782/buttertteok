@@ -14,7 +14,7 @@ export default function KakaoMapLoader({ children }: KakaoMapLoaderProps) {
       return
     }
 
-    if (window.kakao?.maps?.load) {
+    if (typeof window.kakao?.maps?.load === 'function') {
       kakao.maps.load(() => setLoaded(true))
       return
     }
