@@ -10,8 +10,8 @@ import { useBlogSearch } from './hooks/useBlogSearch'
 import type { Place } from './types/kakao'
 import './App.css'
 
-const DEFAULT_CENTER = { lat: 36.5, lng: 127.5 }
-const DEFAULT_LEVEL = 13
+const DEFAULT_CENTER = { lat: 35.9, lng: 127.8 }
+const DEFAULT_LEVEL = 14
 
 function getBounds(places: Place[]): { center: { lat: number; lng: number }; level: number } {
   if (places.length === 0) return { center: DEFAULT_CENTER, level: DEFAULT_LEVEL }
